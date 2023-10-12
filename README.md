@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# A Nuxt 3 template with Tailwind CSS, JavaScript
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Will serve as the public web page of Open Roboverse in some future.
 
 ## Setup
 
