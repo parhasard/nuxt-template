@@ -20,7 +20,7 @@
 </text>
 <text class="mandala-ring mandala-accent-1" dy="100" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
   <textPath class="animate-colors2" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
-    [INFO] [launch]: Default logging verbosity is set to INFO
+    .     [INFO] [launch]: Default logging verbosity is set to INFO       .
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1" dy="150" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
