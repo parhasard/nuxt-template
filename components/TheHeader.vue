@@ -8,28 +8,28 @@
           <path id="singleCircle" d="M337.5,337.5 m-320,0 a320,320 0 1,1 640,0 a320,320 0 1,1 -640,0"></path>
         </defs>
         <text class="mandala-ring mandala-accent-1" dy="0" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath class=" text-on-path" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; ">
+  <textPath href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 30px; ">
     &lt;node pkg="turtlesim" exec="turtlesim_node" name="sim" namespace="turtlesim1"/&gt;
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1" dy="50" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath class=" text-on-path" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif;  ">
+  <textPath class=" text-on-path" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
     
     ros2 launch &lt;package_name/&gt; &lt;launch_file_name/&gt;
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1" dy="100" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath class=" text-on-path animate-colors2" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; ">
+  <textPath class=" text-on-path animate-colors2" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
     .     [INFO] [launch]: Default logging verbosity is set to INFO       .
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1" dy="150" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath class=" text-on-path" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif;  ">
+  <textPath class=" text-on-path" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 10px; ">
     &lt;node pkg="turtlesim" exec="mimic" name="mimic"&gt;
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1 " dy="180" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath class=" text-on-path animate-colors1" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; ">
+  <textPath class=" text-on-path animate-colors1" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px;">
      .                ros2 launch turtlesim_mimic_launch.py                                       .
   </textPath>
 </text>
@@ -72,9 +72,29 @@
   </div>
 </template>
 
-<script setup  lang="ts">
+<script setup lang="ts">
+import { onMounted, onBeforeUnmount, ref } from 'vue';
 
+const adjustTextLength = () => {
+  const svg = document.querySelector('svg');
+  if (!svg) return;
 
+  const svgWidth = svg.clientWidth;
+  const newTextLength = svgWidth * someFactor; // Adjust 'someFactor' as needed
+
+  document.querySelectorAll('text').forEach(textElement => {
+    textElement.setAttribute('textLength', newTextLength.toString());
+  });
+};
+
+onMounted(() => {
+  adjustTextLength();
+  window.addEventListener('resize', adjustTextLength);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', adjustTextLength);
+});
 </script>
 
 <style scoped>
@@ -145,6 +165,7 @@ span {
 
 .mandala-ring {
   transform-origin: 337.5px 337.5px;
+  
 }
 
 .mandala-ring:nth-child(odd) {
@@ -157,14 +178,14 @@ span {
 
 /* Default style */
 .text-on-path {
-  font-size: 2vw;
+  font-size: 20px;
   letter-spacing: normal;
 }
 
 /* Smaller font and tighter letter spacing on smaller screens */
 @media (max-width: 600px) {
   .text-on-path {
-    font-size: 1vw;
+    font-size: 16px;
     letter-spacing: -1px;
   }
 }
