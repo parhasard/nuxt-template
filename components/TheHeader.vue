@@ -8,28 +8,28 @@
           <path id="singleCircle" d="M337.5,337.5 m-320,0 a320,320 0 1,1 640,0 a320,320 0 1,1 -640,0"></path>
         </defs>
         <text class="mandala-ring mandala-accent-1" dy="0" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath href="#singleCircle" style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 30px; ">
+  <textPath href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 30px; ">
     &lt;node pkg="turtlesim" exec="turtlesim_node" name="sim" namespace="turtlesim1"/&gt;
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1" dy="50" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath href="#singleCircle" style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 20px; ">
+  <textPath href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
     
     ros2 launch &lt;package_name/&gt; &lt;launch_file_name/&gt;
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1" dy="100" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath class="animate-colors2" href="#singleCircle" style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 20px; ">
+  <textPath class="animate-colors2" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
     [INFO] [launch]: Default logging verbosity is set to INFO
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1" dy="150" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath href="#singleCircle" style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 10px; ">
+  <textPath href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 10px; ">
     &lt;node pkg="turtlesim" exec="mimic" name="mimic"&gt;
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1 " dy="180" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath class="animate-colors1" href="#singleCircle" style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 20px;">
+  <textPath class="animate-colors1" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px;">
      .                ros2 launch turtlesim_mimic_launch.py                                       .
   </textPath>
 </text>
