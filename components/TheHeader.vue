@@ -13,23 +13,23 @@
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1" dy="50" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
+  <textPath class=" text-on-path" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
     
     ros2 launch &lt;package_name/&gt; &lt;launch_file_name/&gt;
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1" dy="100" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath class="animate-colors2" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
+  <textPath class=" text-on-path animate-colors2" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
     .     [INFO] [launch]: Default logging verbosity is set to INFO       .
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1" dy="150" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 10px; ">
+  <textPath class=" text-on-path" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 10px; ">
     &lt;node pkg="turtlesim" exec="mimic" name="mimic"&gt;
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1 " dy="180" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath class="animate-colors1" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px;">
+  <textPath class=" text-on-path animate-colors1" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px;">
      .                ros2 launch turtlesim_mimic_launch.py                                       .
   </textPath>
 </text>
@@ -154,5 +154,20 @@ span {
 .mandala-ring:nth-child(even) {
   animation: spinccw 150s linear infinite;
 }
+
+/* Default style */
+.text-on-path {
+  font-size: 20px;
+  letter-spacing: normal;
+}
+
+/* Smaller font and tighter letter spacing on smaller screens */
+@media (max-width: 600px) {
+  .text-on-path {
+    font-size: 16px;
+    letter-spacing: -1px;
+  }
+}
+
 
 </style>
