@@ -7,42 +7,35 @@
         <defs>
           <path id="singleCircle" d="M337.5,337.5 m-320,0 a320,320 0 1,1 640,0 a320,320 0 1,1 -640,0"></path>
         </defs>
-        <text class="mandala-ring mandala-accent-1" dy="0" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 30px; ">
-    &lt;node pkg="turtlesim" exec="turtlesim_node" name="sim" namespace="turtlesim1"/&gt;
-  </textPath>
-</text>
-<text class="mandala-ring mandala-accent-1" dy="50" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath class=" text-on-path" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
-    
-    ros2 launch &lt;package_name/&gt; &lt;launch_file_name/&gt;
-  </textPath>
-</text>
-<text class="mandala-ring mandala-accent-1" dy="100" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath class=" text-on-path animate-colors2" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
-    .     [INFO] [launch]: Default logging verbosity is set to INFO       .
-  </textPath>
-</text>
-<text class="mandala-ring mandala-accent-1" dy="150" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath class=" text-on-path" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 10px; ">
-    &lt;node pkg="turtlesim" exec="mimic" name="mimic"&gt;
-  </textPath>
-</text>
-<text class="mandala-ring mandala-accent-1 " dy="180" textLength="2010" style="letter-spacing: -2px; word-spacing: 8px;">
-  <textPath class=" text-on-path animate-colors1" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px;">
-     .                ros2 launch turtlesim_mimic_launch.py                                       .
-  </textPath>
-</text>
-
-
-
-
-
+        <text class="mandala-ring mandala-accent-1" dy="0" textLength="1500" style="letter-spacing: -2px; word-spacing: 20px;"> <!-- Adjusted textLength and word-spacing -->
+          <textPath href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
+            &lt;node pkg="turtlesim" exec="turtlesim_node" name="sim" namespace="turtlesim1"/&gt;
+          </textPath>
+        </text>
+        <text class="mandala-ring mandala-accent-1" dy="50" textLength="1500" style="letter-spacing: -2px; word-spacing: 20px;"> <!-- Adjusted textLength and word-spacing -->
+          <textPath class="text-on-path" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
+            ros2 launch &lt;package_name/&gt; &lt;launch_file_name/&gt;
+          </textPath>
+        </text>
+        <text class="mandala-ring mandala-accent-1" dy="100" textLength="1500" style="letter-spacing: -2px; word-spacing: 20px;"> <!-- Adjusted textLength and word-spacing -->
+          <textPath class="text-on-path animate-colors2" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
+            .     [INFO] [launch]: Default logging verbosity is set to INFO       .
+          </textPath>
+        </text>
+        <text class="mandala-ring mandala-accent-1" dy="150" textLength="1500" style="letter-spacing: -2px; word-spacing: 20px;"> <!-- Adjusted textLength and word-spacing -->
+          <textPath class="text-on-path" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px; ">
+            &lt;node pkg="turtlesim" exec="mimic" name="mimic"&gt;
+          </textPath>
+        </text>
+        <text class="mandala-ring mandala-accent-1 " dy="200" textLength="1500" style="letter-spacing: -2px; word-spacing: 20px;"> <!-- Adjusted textLength and word-spacing -->
+          <textPath class="text-on-path animate-colors1" href="#singleCircle" style="font-family: 'Comic Sans MS', sans-serif; font-size: 20px;">
+            .                ros2 launch turtlesim_mimic_launch.py         .
+          </textPath>
+        </text>
       </svg>
     </div>
   </div>
 </span>
-
     <div class="mx-auto max-w-7xl px-6 lg:px-8" style="z-index: 10;">
       <div class="mx-auto max-w-2xl lg:mx-0">
         <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl gradient-text-left">together, we shape the future of robotics
@@ -73,28 +66,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref } from 'vue';
 
-const adjustTextLength = () => {
-  const svg = document.querySelector('svg');
-  if (!svg) return;
-
-  const svgWidth = svg.clientWidth;
-  const newTextLength = svgWidth * someFactor; // Adjust 'someFactor' as needed
-
-  document.querySelectorAll('text').forEach(textElement => {
-    textElement.setAttribute('textLength', newTextLength.toString());
-  });
-};
-
-onMounted(() => {
-  adjustTextLength();
-  window.addEventListener('resize', adjustTextLength);
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', adjustTextLength);
-});
 </script>
 
 <style scoped>
