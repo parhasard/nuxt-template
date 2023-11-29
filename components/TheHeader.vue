@@ -9,7 +9,8 @@
         </defs>
         <text class="mandala-ring mandala-accent-1" dy="0" textLength="2010" >
   <textPath href="#singleCircle" style=" font-size: 30px; ">
-    &lt;node pkg="turtlesim" exec="turtlesim_node" name="sim" namespace="turtlesim1"/&gt;
+    <!-- &lt;node pkg="turtlesim" exec="turtlesim_node" name="sim" namespace="turtlesim1"/&gt; -->
+    <tspan v-for="(char, index) in textArray" :key="index">{{ char }}</tspan>
   </textPath>
 </text>
 <text class="mandala-ring mandala-accent-1" dy="50" textLength="2010" >
@@ -73,9 +74,15 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from 'vue';
 
+const text = ref(" <node pkg='turtlesim' exec='turtlesim_node' name='sim' namespace='turtlesim1';>"); // Replace with your text
+
+// Split text into an array of characters
+const textArray = computed(() => {
+  return text.value.split('');
+});
 </script>
-
 <style scoped>
 span {
   display: block;
@@ -106,11 +113,11 @@ span {
 
 .mandala-ring {
   font-family: 'Comic Sans MS',  sans-serif;
-  font-size: 20px; 
   fill: #80757a; 
   opacity: 0.5;
-  letter-spacing: -2px; 
-  word-spacing: 8px;
+  font-size: 2vw; 
+  letter-spacing: 0.1vw; 
+  word-spacing: 0.3vw;
 }
 
 @media (max-width: 600px) { 
