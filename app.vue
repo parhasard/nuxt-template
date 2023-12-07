@@ -1,29 +1,41 @@
 <template>
-    <div class="scaled-container">
+    <div>
       <NuxtLayout>
         <NuxtPage/>
       </NuxtLayout>
     </div>
 </template>
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
-const scaleFactor = ref(1.3); // 130% zoom
+const scaleFactor = ref(1);
+let initialViewportWidth = null;
+
+// This function checks if the device is probably a mobile
+const isMobileDevice = () => window.innerWidth <= 768;
+
+const adjustScale = () => {
+  const viewportWidth = window.innerWidth;
+
+  if (!initialViewportWidth) {
+    initialViewportWidth = viewportWidth;
+  }
+
+  scaleFactor.value = viewportWidth / initialViewportWidth;
+};
+
+onMounted(() => {
+  if (!isMobileDevice()) {
+    window.addEventListener('resize', adjustScale);
+    adjustScale();
+  }
+});
 </script>
-
 <style>
 html {
   background-color: black;
 }
 
-
-.scaled-container {
-  transform: scale(1.3);
-  transform-origin: top center; /* This ensures scaling happens from the top center */
-  width: 77%; /* Adjust the width to prevent horizontal overflow */
-  margin: 0 auto; /* Center the content horizontally */
-  overflow: auto; /* In case the content overflows, enable scrolling */
-}
 .gradient-text-left {
   background: linear-gradient(45deg, #4bb8a6,#085ba0 );
   -webkit-background-clip: text;
@@ -52,7 +64,5 @@ html {
   opacity: 0;
   filter: blur(1rem);
 }
-
-
 
 </style>
