@@ -1,27 +1,35 @@
-# Nuxt 3 Minimal Starter
+<p align="center">
+  <a href="https://www.openroboticmetaverse.org">
+    <img alt="orom" src="./assets/icon-with-text.png" width="300" />
+  </a>
+</p>
+<h1 align="center">
+  Current Website Repo for <a href="https://www.openroboticmetaverse.org">Open Robotic Metaverse</a>
+</h1>
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
 
-Make sure to install the dependencies:
+The site is developed using Nuxt 3
 
-node.js v >  18.16.0
+Check out their [official website](https://nuxt.com/)
 
+1. Clone the Repo 
 
-npm v > 9.5.1
+```bash
+git clone https://github.com/openroboverse/open-rv-website.git
 
+```
 
+2. Install dependencies
 
 ```bash
 # npm
 npm install
-
 ```
 
-## Development Server
+3. Start the development server on `http://localhost:3000`:
 
-Start the development server on `http://localhost:3000`:
 
 ```bash
 # npm
@@ -31,3 +39,4 @@ npm run dev
 
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
