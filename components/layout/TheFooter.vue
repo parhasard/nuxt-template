@@ -4,11 +4,14 @@
       <div class="mx-auto w-full max-w-screen-7xl p-9 py-6 lg:py-8">
         <div class="flex justify-between">
           <div class="mb-6 md:mb-0">
-            <NuxtLink to="#" class="flex items-center">
-              <img src="/icon.svg" class="h-8 mr-3" alt="open robotic metaverse Logo" />
+            <NuxtLink to="/" class="flex items-center">
+              <img src="/icon.svg" class="h-8 sm:h-14 mr-3" alt="open robotic metaverse Logo" />
               <span
-                class="self-center lg:text-2xl text-sm font-semibold whitespace-nowrap dark:text-white lg:block hidden">open
-                robotic metaverse</span>
+                class="self-center lg:text-xl text-sm font-semibold whitespace-nowrap dark:text-white lg:block hidden">
+                <div>open</div>
+                <div>robotic</div>
+                <div>metaverse</div>
+                 </span>
             </NuxtLink>
           </div>
 
